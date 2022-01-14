@@ -1,11 +1,7 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const browser = await puppeteer.launch({
-        headless: false,
-        defaultViewport: null,
-        args: ['--start-maximized']
-    });
+    const browser = await puppeteer.launch({});
     const page = await browser.newPage();
     await page.goto('https://example.com');
     await page.screenshot({
